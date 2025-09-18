@@ -1,47 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AltSchool Assignment 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oluwa's Personal Profile</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 30px;
+    }
+
+    /* Top Section: Profile */
+    .profile-section {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #4a90e2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      object-fit: cover; /* ensures the image fits inside the circle */
+    }
+
+    .about {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .about:hover {
+      transform: translateY(-5px);
+    }
+
+    .about h2 {
+      margin-top: 0;
+      color: #4a90e2;
+    }
+
+    /* Bottom Section: Hobbies & Aspirations */
+    .info-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .hobbies, .aspirations {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 5px solid #4a90e2;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hobbies:hover, .aspirations:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .hobbies h3, .aspirations h3 {
+      margin-top: 0;
+      color: #4a90e2;
+    }
+
+    .hobbies ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hobbies li {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .profile-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .info-section {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-pic {
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Top Section: Profile -->
+    <div class="profile-section">
+      <!-- Profile picture -->
+      <img src="./assets/image/Profile pic.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="about">
+        <h2>Talk About Yourself</h2>
+        <p>Hello! My name is Otoide Wisdom, and I am a passionate individual who loves technology, creativity, and learning new skills. I enjoy exploring innovative ideas and applying them to real-life projects. My goal is to continuously grow, improve myself, and contribute positively to my community and the tech world.</p>
+      </div>
+    </div>
 
-<!-- Top of the page -->
-<a id="top"></a>
-<h1>My AltSchool Profile</h1>
-
-<h2>Basic Information</h2>
-<p><strong>Name:</strong> Otoide Wisdom</p>
-<p><strong>ALT SCHOOL ID:</strong> ALT/SOE/025/4755</p>
-<p><strong>Email:</strong> oluwabobo47@gmail.com</p>
-
-<h2>Biography</h2>
-<p>
-    I am [Otoide Wisdom], a student at AltSchool Africa in the School of Engineering. 
-    I have a passion for technology and problem-solving, and I enjoy learning how 
-    to build impactful solutions using software engineering principles.
-</p>
-
-<h2>Why I Joined the Program</h2>
-<p>
-    I joined AltSchool Africa because I wanted a structured, hands-on approach 
-    to learning software engineering. The mentorship, community, and curriculum 
-    offered by AltSchool align perfectly with my learning goals.
-</p>
-
-<h2>My Goals</h2>
-<p>
-    My goals for the School of Engineering program are to:
-</p>
-<ul>
-    <li>Master HTML, CSS, JavaScript, and backend technologies</li>
-    <li>Work on real-world projects to build practical experience</li>
-    <li>Contribute to open-source projects</li>
-    <li>Secure a role as a software engineer after graduation</li>
-</ul>
-
-<!-- Back to top link -->
-<p><a href="#top">Back to Top</a></p>
-
+    <!-- Bottom Section: Hobbies & Aspirations -->
+    <div class="info-section">
+      <div class="hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li><strong>Reading:</strong> I enjoy books and articles about technology, self-improvement, and entrepreneurship. It helps me gain new insights and apply them to my personal and professional life.</li>
+          <li><strong>Gaming:</strong> I love strategy and puzzle games, which allow me to think critically and solve problems efficiently while having fun and relaxing my mind.</li>
+          <li><strong>Music:</strong> Listening to music is one of my favorite hobbies. It inspires creativity, improves focus, and provides a great way to unwind after a busy day.</li>
+        </ul>
+      </div>
+      <div class="aspirations">
+        <h3>Aspiration in Life</h3>
+        <p>My aspiration is to become a skilled software developer who creates meaningful and innovative solutions for everyday problems. I want to contribute positively to the technology industry, help people achieve their goals, and continuously learn and grow both personally and professionally throughout my life.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
